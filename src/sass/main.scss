@@ -1,0 +1,27 @@
+#isiaToTop {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: rgb(209, 51, 23);
+  color: #fff;
+  border: 3px solid #fff;
+  float: right;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 1;
+  animation: toTopFadeIn 2s linear;
+  cursor: pointer;
+  &:hover {
+    background: rgb(223, 70, 36);
+  }
+}
+
+@keyframes toTopFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
