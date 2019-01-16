@@ -1,6 +1,5 @@
 const options = {
   scrollStartPosition: 20,
-  toTopElement: 'isiaToTop',
   scrollAnimationSpeed: 1000
 }
 

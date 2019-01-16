@@ -27,7 +27,7 @@
                               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAVFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////8wXzyWAAAAG3RSTlMAAQIgJic0N0BHUVVZW1xdYm9wcXeFlZ2rrf2L0Jb5AAAAXElEQVQYV7XNRw6AMBBDURN673Xuf09IoiGjwBL+xtLbGPimYOmethH1nqnLfLVGNLyYVLUT+WrtiCqhbEB9qzPWEVidAY3RApO2mD9bjSkwCzOa6y1DiLIEv3QCJfQLDOsEaRoAAAAASUVORK5CYII=" alt="Scroll to top">
                           </div>`,
     scrollStartPosition: 50,
-    toTopElement: 'toTopElement',
+    toTopElement: 'isiaToTop',
     scrollAnimationSpeed: 500
   }
 

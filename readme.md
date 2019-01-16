@@ -32,10 +32,22 @@ Initialize the script as follows in the footer
 <script type="text/javascript">
   isiaToTop.active(
     scrollStartPosition: 20,
-    toTopElement: 'isiaToTop',
     scrollAnimationSpeed: 1000
   )
 </script>
+```
+
+### Option defaults
+
+```js
+  isiaToTop.active(
+    toTopElementTemplate: `<div id="isiaToTop" style="display: none">
+                              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAVFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////8wXzyWAAAAG3RSTlMAAQIgJic0N0BHUVVZW1xdYm9wcXeFlZ2rrf2L0Jb5AAAAXElEQVQYV7XNRw6AMBBDURN673Xuf09IoiGjwBL+xtLbGPimYOmethH1nqnLfLVGNLyYVLUT+WrtiCqhbEB9qzPWEVidAY3RApO2mD9bjSkwCzOa6y1DiLIEv3QCJfQLDOsEaRoAAAAASUVORK5CYII=" alt="Scroll to top">
+                          </div>`,
+    scrollStartPosition: 50,
+    toTopElement: 'isiaToTop',
+    scrollAnimationSpeed: 500
+  )
 ```
 
 ### API Usage
