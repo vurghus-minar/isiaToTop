@@ -205,7 +205,6 @@ gulp.task(dir.demoDir + '_pug', function () {
 })  
 
 
-
 /*
  * Demo Set up
  */
@@ -238,7 +237,7 @@ gulp.task('move_jquery', function () {
 
 // Move Base CSS to demo
 gulp.task('move_css', [dir.themesLabel + '_sass'], function () {
-  gulp.src([dir.distDir + '/**/*.css'],{'base' : './' + dir.distDir})
+  gulp.src([dir.distDir + '/**/*.css', dir.distDir + '/**/*.min.css'],{'base' : './' + dir.distDir})
     .pipe(plumber({
       handleError: function (err) {
         console.log(err)
