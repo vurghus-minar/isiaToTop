@@ -1,9 +1,9 @@
 {
-  "name": "isia-lightbox",
+  "name": "isiatotop",
   "version": "1.0.0",
-  "description": "isiaLightbox is lightweight and standalone javascript modal lightbox component",
+  "description": "isiaToTop is a lightweight extendable scroll to top widget written in javascript.",
   "main": "index.html",
-  "repository": "https://github.com/vurghus-minar",
+  "repository": "https://github.com/vurghus-minar/isiaToTop",
   "author": "Vurghus Minar <vurghus.minar@outlook.com>",
   "license": "MIT",
   "private": false,
