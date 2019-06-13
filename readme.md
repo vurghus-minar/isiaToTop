@@ -1,5 +1,10 @@
 # isiaToTop
 
+## Demo
+
+Check out the [**demo**](https://codepen.io/vurghusm/pen/NZqGxb) on Codepen: [https://codepen.io/vurghusm/pen/NZqGxb](https://codepen.io/vurghusm/pen/NZqGxb)
+
+
 ### About
 
 isiaToTop is a lightweight extendable scroll to top widget written in javascript.
