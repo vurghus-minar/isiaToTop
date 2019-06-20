@@ -35,7 +35,9 @@
                           </div>`,
     scrollStartPosition: 50,
     toTopElement: 'isiaToTop',
-    scrollAnimationSpeed: 500
+    scrollAnimationSpeed: 500,
+    onClick: null, // callback overrides _onClick method
+    onScroll: null // callback appends to the _onScroll method
   }
 
   let settings, toTopElement
@@ -82,9 +84,7 @@
   }
 
   /**
-   * onScroll API method runs on page scroll.
-   * 
-   * @param {callback} fn - callback function to run during scroll.
+   * _onScroll method runs on page scroll.
    */
   function _onScroll (fn) {
     window.addEventListener('scroll', function () {
@@ -93,31 +93,25 @@
       if (documentHeight > windowHeight) {
         scrollPos > settings.scrollStartPosition ? _showToTopElement() : _hideToTopElement()
       }
-      if (typeof fn === 'function') {
-        fn()
+
+      if (typeof settings.onScroll === 'function'){
+        settings.onScroll.call(this)
       }
+
     })
   }
 
   /**
-   * onClick API method runs when element is clicked.
-   * 
-   * @param {callback} fn - callback function to run when clicked.
-   * @param {boolean} override - override default behavior completely when clicked - Default is false.
+   * _onClick method runs when element is clicked.
    */
-  function _onClick (fn, override = false) {
-    if (override) {
-      if (typeof fn === 'function') {
-        fn.call(this)
-      }
-    } else {
-      toTopElement.addEventListener('click', function () {
+  function _onClick () {
+    toTopElement.addEventListener('click', function () {
+      if (typeof settings.onClick === 'function') {
+        settings.onClick.call(this)
+      } else {
         _onToTop(html, 0, settings.scrollAnimationSpeed)
-        if (typeof fn === 'function') {
-          fn.call(this)
-        }
-      })      
-    }
+      }
+    }) 
   }
 
   /**
@@ -125,7 +119,7 @@
    */
   function _scroll(){
     if(document.getElementById(settings.toTopElement).length !== 0){
-      _onToTop()
+      _onToTop(html, 0, settings.scrollAnimationSpeed)
     }
   }
 
@@ -181,12 +175,10 @@
   }
 
   /**
-   * Expose plugin api methods
+   * Plugin methods to expose publicly.
    */
   return {
     active: _init,
-    onClick: _onClick,
-    onScroll: _onScroll,
     scroll: _scroll
   }
 
