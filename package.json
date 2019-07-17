@@ -2,7 +2,7 @@
   "name": "isiatotop",
   "version": "1.1.0",
   "description": "isiaToTop is a lightweight extendable scroll to top widget written in javascript.",
-  "main": "index.html",
+  "main": "./dist/isiaToTop.js",
   "repository": "https://github.com/vurghus-minar/isiaToTop",
   "author": "Vurghus Minar <vurghus.minar@outlook.com>",
   "license": "MIT",
