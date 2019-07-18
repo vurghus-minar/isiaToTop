@@ -86,11 +86,11 @@
   /**
    * _onScroll method runs on page scroll.
    */
-  function _onScroll (fn) {
+  function _onScroll () {
     window.addEventListener('scroll', function () {
       const scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName('html')[0].scrollTop
 
-      if (documentHeight > windowHeight) {
+      if (documentHeight >= windowHeight) {
         scrollPos > settings.scrollStartPosition ? _showToTopElement() : _hideToTopElement()
       }
 
